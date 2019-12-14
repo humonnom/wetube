@@ -11,7 +11,7 @@ const config = {
   mode: MODE,
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "style.css"
+      filename: "styles.css"
     })
   ],
   module: {
