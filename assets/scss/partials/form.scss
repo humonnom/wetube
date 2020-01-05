@@ -9,12 +9,18 @@
     align-self: center;
     div.fileUpload {
       display: block;
+      background-color: white;
       width: 100%;
       align-self: center;
+      padding: 10px 20px;
+      margin-bottom: 30px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 400;
+      border-bottom: 1px solid $green;
       label {
         font-size: 14px;
         font-weight: 300;
-        margin: 10px 0px;
       }
       input[type="file"] {
         margin: 10px 0px;
@@ -56,6 +62,15 @@
         font-weight: 300;
         color: rgba(0, 0, 0, 0.7);
       }
+    }
+  }
+  a.form-container__link {
+    color: $double-dark-grey;
+    &:hover {
+      cursor: pointer;
+      font-weight: 500;
+      transform: scale(1.05);
+      color: $black;
     }
   }
 }

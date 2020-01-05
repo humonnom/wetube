@@ -1,6 +1,16 @@
 extends layouts/main
 
 block content
-    .header
-        img.avatar(src=user.avatarUrl)
-        span="프로필링크"
+    .user-profile
+        .user-profile__header
+            img.u-avatar(src=user.avatarUrl)
+            h4.profile__username=user.name
+            h5.profile__useremail=user.email
+        if user.id === loggedUser.id
+        .buttons
+            a(href=`/users${routes.editProfile}`)
+                span.icon ✍︎
+                p Edit Profile
+            a(href=`/users${routes.changePassword}`)
+                span.icon ✐
+                p Change Password

@@ -140,6 +140,17 @@ input {
   input:focus, input:active {
     outline: none; }
 
+.u-avatar {
+  background-color: #1cb94b;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  width: 10vw;
+  margin-top: 20px;
+  -webkit-box-shadow: 0 4px 6px rgba(32, 32, 39, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+     -moz-box-shadow: 0 4px 6px rgba(32, 32, 39, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 6px rgba(32, 32, 39, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); }
+
 html,
 body {
   height: 100%; }
@@ -289,14 +300,22 @@ textarea,
             align-self: center; }
     .form-container form div.fileUpload {
       display: block;
+      background-color: white;
       width: 100%;
       -webkit-align-self: center;
           -ms-flex-item-align: center;
-              align-self: center; }
+              align-self: center;
+      padding: 10px 20px;
+      margin-bottom: 30px;
+      -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+              border-radius: 5px;
+      font-size: 14px;
+      font-weight: 400;
+      border-bottom: 1px solid #1cb94b; }
       .form-container form div.fileUpload label {
         font-size: 14px;
-        font-weight: 300;
-        margin: 10px 0px; }
+        font-weight: 300; }
       .form-container form div.fileUpload input[type="file"] {
         margin: 10px 0px;
         font-size: 12px;
@@ -356,6 +375,17 @@ textarea,
       .form-container form input:not([type="file"])::placeholder {
         font-weight: 300;
         color: rgba(0, 0, 0, 0.7); }
+  .form-container a.form-container__link {
+    color: rgba(0, 0, 0, 0.6); }
+    .form-container a.form-container__link:hover {
+      cursor: pointer;
+      font-weight: 500;
+      -webkit-transform: scale(1.05);
+         -moz-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+           -o-transform: scale(1.05);
+              transform: scale(1.05);
+      color: #444444; }
 
 .social-login {
   display: -webkit-box;
@@ -506,4 +536,96 @@ textarea,
     margin-top: 25px; }
     .video-detail__container .video__column .video__comments .video__comment-number {
       font-size: 18px; }
+
+.user-profile {
+  width: 100%;
+  max-width: 1200vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-flow: 100px; }
+  .user-profile .user-profile__header {
+    grid-column: 3 / 5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 80px; }
+    .user-profile .user-profile__header h4 {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 20px; }
+    .user-profile .user-profile__header h5 {
+      font-size: 12px;
+      font-weight: 400; }
+  .user-profile .buttons {
+    grid-area: 2 / 3 / 3 / 5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .user-profile .buttons a {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+         -moz-box-orient: vertical;
+         -moz-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .user-profile .buttons a span.icon {
+        font-size: 20px;
+        font-weight: 600;
+        padding: 10px;
+        background-color: white;
+        -webkit-border-radius: 20%;
+           -moz-border-radius: 20%;
+                border-radius: 20%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-align-self: center;
+            -ms-flex-item-align: center;
+                align-self: center;
+        -webkit-box-shadow: 0 4px 6px rgba(32, 32, 39, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+           -moz-box-shadow: 0 4px 6px rgba(32, 32, 39, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+                box-shadow: 0 4px 6px rgba(32, 32, 39, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); }
+        .user-profile .buttons a span.icon:hover {
+          cursor: pointer; }
+        .user-profile .buttons a span.icon:first-child {
+          margin-bottom: 15px; }
 
